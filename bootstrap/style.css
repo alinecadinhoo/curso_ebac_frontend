@@ -1,0 +1,33 @@
+/* Estilo para o formulário */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Estilo para os campos de entrada */
+.form-control {
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+/* Estilo para o botão de envio */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Estilo para o botão de envio quando hover */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilo para o cabeçalho */
+h1 {
+    color: #007bff;
+}
