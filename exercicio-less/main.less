@@ -1,0 +1,131 @@
+// Variáveis
+@border-radius: 16px;
+@primary-color: #182C61;
+@accent-color: #44bd32;
+@accent-hover-color: #4cd137;
+
+@font-family: Roboto, sans-serif;
+@container-max-width: 1024px;
+@menu-item-margin: 24px;
+@section-padding: 56px;
+
+// Mapa de Cores
+@colors: {
+    primary: @primary-color;
+    accent: @accent-color;
+    accent-hover: @accent-hover-color;
+};
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @font-family;
+}
+
+// Body
+body {
+    background-color: #f5f6fa;
+}
+
+// List
+li {
+    list-style: none;
+}
+
+// Container
+.container {
+    max-width: @container-max-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// Header
+header {
+    background-color: @colors[primary];
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+}
+
+// Menu
+.menu {
+    display: flex;
+
+    li {
+        font-weight: bold;
+        margin-left: @menu-item-margin;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+// Section
+section {
+    padding: @section-padding 0;
+}
+
+// Products
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+
+    // Product Item
+    .product-item img {
+        width: 100%;
+        border-radius: @border-radius;
+    }
+
+    // Product Button
+    .product-button {
+        display: block;
+        background-color: @colors[accent];
+        color: #fff;
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: @colors[accent-hover];
+        }
+    }
+}
+
+// Media Queries
+@media screen and (max-width: 1023px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .products {
+        display: block;
+
+        .product-item {
+            margin-bottom: 32px;
+        }
+    }
+}
